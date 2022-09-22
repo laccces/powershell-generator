@@ -1,19 +1,45 @@
+#ref
 @i = 1
-@hash = {}
+@x = 1
+@user_hash = {}
+@team_hash = {}
 
+# email addresses
 while @i < 10
   puts "Enter user email address, or type stop:"
   user = gets.chomp
     if user == "stop"
       break
     end
-  @hash["$user#{@i}"] = "#{user}"
+  @user_hash["$user#{@i}"] = "#{user}"
   @i += 1
 end
 
-puts @hash
+# teams
 
-# take at least one Team name, allow multiple, assign to variable
+while @x < 100
+  puts "Enter Team name, or type stop:"
+  team = gets.chomp
+    if user == "stop"
+      break
+    end
+  @team_hash["$team#{@x}"] = "#{team}"
+  @x += 1
+end
+
+#output
+
+@user_hash.each do |key, value|
+  puts "#{key} = #{value}"
+end
+
+
+
+@team_hash.each do |key, value|
+  puts "#{key} = #{value}"
+end
+
+
 
 teamsrequired = []
 
