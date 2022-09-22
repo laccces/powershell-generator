@@ -1,4 +1,5 @@
 @i = 1
+@hash = {}
 
 while @i < 10
   puts "Enter user email address, or type stop:"
@@ -6,11 +7,11 @@ while @i < 10
     if user == "stop"
       break
     end
-  puts "$user#{@i} = \"#{user}\""
+  @hash["$user#{@i}"] = "#{user}"
   @i += 1
 end
 
-
+puts @hash
 
 # take at least one Team name, allow multiple, assign to variable
 
